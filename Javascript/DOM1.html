@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm learning</title>
+</head>
+<body>
+    <div class="one">
+        <h1 class="heading" id = "title">DOM learning in chai aur code <span style="display:none";> test text</span></h1>
+        <h2>Ravi Pal</h2>
+        <h2>Vinita Pal</h2>
+        <h2>Nishu Pal</h2>
+        <h2>Rajat Pal</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul class="ulist">
+            <li class="list">one</li>
+            <li class="list">two</li>
+            <li class="list">three</li>
+        </ul>
+
+        <h3 class="h">javascript</h3>
+        <h3 class="h">java</h3>
+        <h3 class="h">cpp</h3>
+        <h3 class="h">python</h3>
+        
+    </div>
+    
+</body>
+<script>
+    //console.log(document.getElementById("title"))
+    let temp1 = document.getElementById("title");
+    // console.log(temp1.id);
+    // console.log(temp1.className)
+    // console.log(temp1.getAttribute('id'))
+    // console.log(temp1.getAttribute('class'))
+    // temp1.setAttribute("id","tit");
+    // console.log(temp1.getAttribute('id'));
+    // console.log(temp1.innerText);
+    // console.log(temp1.innerHTML);
+    // console.log(temp1.textContent);
+    // temp1.innerText="javascript learning";
+    // console.log(temp1.innerText);
+    temp1.style.color="red";
+    temp1.style.backgroundColor="yellow"
+
+
+    //query Selector
+    const temp2 = document.querySelector('h2');
+    //console.log(temp2)
+    temp2.style.color="blue";
+    // console.log(document.querySelector('#title'));
+    // console.log(document.querySelector('.heading'));
+    //console.log(document.querySelector(".list"))
+
+    //query selector all
+    let temp3 = document.querySelectorAll('.list');
+    console.log(temp3)
+    temp3[0].style.color="orange";
+    // temp3.forEach((li)=>{
+    //     li.style.fontSize="60px";
+    //     li.style.color="pink";
+
+    // })
+
+    let temp4 = document.querySelectorAll(".ulist");
+    console.log(temp4)
+    temp4.forEach((li)=>{
+        li.style.fontSize="60px";
+        li.style.color="pink";
+
+    })
+
+
+    let temp5 = document.getElementsByClassName("h");
+    console.log(temp5)
+    let temp6 = Array.from(temp5);
+    temp6.forEach((li)=>{
+        li.style.fontSize="25px";
+        li.style.color="purple";
+    })
+
+    
+
+</script>
+</html>

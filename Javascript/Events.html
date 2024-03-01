@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <button id="btn">Click to stop to change text</button>
+    <ul id = "main">
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzJDx2rgz5O2J26_fzWpRxRIHyKbg_uOfsUQ&usqp=CAU" alt="flower" id="flower"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1X-AN3kFs-XAzQU5uTMgBv7IXiWaT-L7zeQ&usqp=CAU" alt="bird" id="bird"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKyxKMDcW_gDUVwmINbYKO_bsH9HiKCqYhA&usqp=CAU" alt="moon" id="moon"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZlf5lc5tX-0gY-y94pGS0mQdL-D0lCH2OQ&usqp=CAU" alt="mountain" id="mountain"></li>
+    </ul>
+    
+</body>
+<script>
+    let flower = document.getElementById("flower");
+    flower.addEventListener("click",()=>{
+        alert("click on flower image")
+    },true)
+    let main = document.getElementById("main");
+    main.addEventListener("click",()=>{
+        alert("click inside ul")
+    },true)
+
+    const changeText = function(){
+        document.querySelector("h2").innerHTML="Wonderful Nature Images";
+    }
+    const changeMe = setTimeout(changeText,2000);
+    document.querySelector("#btn").addEventListener("click",()=>{
+        clearTimeout(changeMe);
+    })
+</script>
+</html>

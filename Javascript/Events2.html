@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:800px
+        }
+    </style>
+</head>
+<body>
+    <h1>click anywhere to get square</h1>
+    <!-- <div id = "main"></div> -->
+</body>
+<script>
+    
+    let body = document.querySelector("body");
+    body.addEventListener("click",()=>{
+        let create = document.createElement("div")
+        create.style.border="2px solid black"
+        create.style.width="200px"
+        create.style.height="200px"
+        body.appendChild(create);
+    })
+    
+</script>
+</html>

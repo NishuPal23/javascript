@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id = "btn">
+            click to change background image
+        </button>
+    </div>
+</body>
+<script>
+    const arr = [
+    {
+        url:"https://tse1.mm.bing.net/th?id=OIP.YAXlTjvtEKchdMVc5laZhwHaE8&pid=Api&P=0&h=180"
+    },
+    {
+        url:"https://tse4.mm.bing.net/th?id=OIP.tQXg8jDcCZTzRYSpRrmXtwHaEK&pid=Api&P=0&h=180"
+    },
+    {
+        url:"https://tse4.mm.bing.net/th?id=OIP.o7N6ZxVke7CphwB_phXwNgHaE7&pid=Api&P=0&h=180"
+    }
+]
+    let btn = document.getElementById("btn")
+    btn.addEventListener("click",()=>{
+        let index = 0;
+        setInterval(()=>{
+            
+            document.body.style.backgroundImage=`url('${arr[index].url}')`
+            index = (index + 1) % arr.length;
+        },1000)
+    })
+</script>
+</html>

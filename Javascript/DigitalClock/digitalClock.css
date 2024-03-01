@@ -1,0 +1,13 @@
+#clock{
+    width:100px;
+    height:50px;
+    border:2px solid black;
+    background-color: rgb(41, 6, 73);
+}
+nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:400px
+}

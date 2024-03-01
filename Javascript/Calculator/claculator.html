@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <main>
+        <section><h1>Calculator</h1></section>
+        <section>
+            <form onsubmit="event.preventDefault();" >
+                <label for="num1">Enter first number : </label>
+                <input type="text" id="num1"><br>
+                <label for="num2">Enter Second number : </label>
+                <input type="text" id="num2"><br>
+                <button onclick="add()">+</button>
+                <button onclick="sub()">-</button>
+                <button onclick="mul()">*</button>
+                <button onclick="div()">/</button>
+                <div id = "res"></div>
+
+
+            </form>
+        </section>
+    </main>
+    <script src ="./calculator.js"></script>
+</body>
+</html>
