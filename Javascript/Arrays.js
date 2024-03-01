@@ -176,9 +176,74 @@ Arr2.length = 0
 // forEach()
 let count = [1,2,3,4,];
 count.forEach((ele)=>{
-   console.log(ele)
+   //console.log(ele)
 })
 
+
+//filter
+let findEven = [1,2,3,4,5,6,7,8];
+let ans = findEven.filter((ele)=>ele%2==0)
+// console.log(ans)
+// console.log(findEven)
+
+let product = [
+    {
+        id:1,
+        name:"laptop",
+        price:70000,
+        deliverAddress : "Meerut"
+    },
+    {
+        id:2,
+        name:"Mobile Phoone",
+        price:45000,
+        deliverAddress : "Meerut"
+    },
+    {
+        id:3,
+        name:"Earphone",
+        price:5000,
+        deliverAddress : "Mumbai"
+    },
+    {
+        id:4,
+        name:"ipad",
+        price:65000,
+        deliverAddress : "Pune"
+    }
+]
+
+let filterProduct = product.filter((ele)=>ele.price>60000)
+//console.log(filterProduct)
+let filterProduct2 = product.filter((ele)=>ele.deliverAddress=="Meerut")
+//console.log(filterProduct2)
+
+
+//map
+let addOne = [1,2,3,4,5];
+let result = addOne.map((ele)=>ele+1);
+//console.log(result)
+
+//nested map
+let anotherResult = result.map((ele)=>ele+10)
+//console.log(anotherResult)
+//console.log(typeof anotherResult)
+
+let more = addOne.map((ele)=>ele+1).map((ele)=>ele+10)
+//console.log(more)
+
+
+
+//reduce
+let sum = [1,2,3,4,5]
+let total = sum.reduce((acc,curr)=>acc+curr,0)
+console.log(total)
+
+let display = sum.reduce(function(acc,curr){
+    console.log(`acc : ${acc} and curr : ${curr}`)
+    return acc+curr
+},0)
+console.log(display)
 
 
 
